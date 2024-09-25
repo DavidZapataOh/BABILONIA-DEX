@@ -7,10 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        background: "#1A1A1A", // Fondo principal oscuro
+        elementBackground: "#2C2C2C", // Fondo de elementos (tarjetas, inputs)
+        primary: "#00C896", // Verde suave para botones y elementos principales
+        secondary: "#FFFFFF", // Blanco suave para textos principales
+        textSecondary: "#A8A8A8", // Gris claro para textos secundarios
+        accent: "#FFD700", // Dorado claro para destacar elementos importantes
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
       },
     },
   },
