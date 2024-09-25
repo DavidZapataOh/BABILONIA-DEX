@@ -20,29 +20,57 @@ const HeroSection = () => {
         <p className="text-lg text-textSecondary mb-10">
           Intercambia y gestiona tus activos en la red Avalanche con velocidad y eficiencia. Una experiencia única en un entorno seguro y amigable.
         </p>
-        <div className="bg-elementBackground p-6 rounded-lg shadow-lg max-w-md mx-auto">
-          <h2 className="text-2xl font-bold text-secondary mb-4">Swap Rápido</h2>
-          <div className="mb-4">
+
+        {/* Contenedor del Swap Rápido Simplificado */}
+        <div className="bg-elementBackground p-6 rounded-[40px_10px_40px_10px] shadow-lg max-w-md mx-auto">
+          <h2 className="text-2xl font-bold text-secondary mb-4">Swap</h2>
+
+          {/* Campo De */}
+          <div className="relative mb-6">
             <label className="block text-textSecondary mb-2">De</label>
-            <input
-              type="text"
-              placeholder="Token (e.g., AVAX)"
-              className="w-full p-2 rounded bg-background text-secondary"
-            />
+            <div className="flex items-center bg-background p-0 rounded-[30px_5px_30px_5px] shadow-lg transition-shadow transform duration-300">
+              <button
+                disabled
+                className="relative w-full cursor-default bg-background text-left shadow-md rounded-[20px_5px_20px_5px] text-secondary border-2 border-primary p-4"
+              >
+                <span className="flex items-center">
+                  <img src="https://cryptologos.cc/logos/avalanche-avax-logo.png?v=024" alt="AVAX" className="w-6 h-6 mr-2 rounded-full border-2 border-accent" />
+                  AVAX
+                </span>
+              </button>
+              <input
+                disabled
+                type="text"
+                value="23"
+                className="ml-4 w-1/2 p-2 rounded-lg bg-background text-secondary border-0 focus:ring-primary focus:border-primary"
+              />
+            </div>
           </div>
-          <div className="mb-4">
+
+          {/* Campo A */}
+          <div className="relative mb-6">
             <label className="block text-textSecondary mb-2">A</label>
-            <input
-              type="text"
-              placeholder="Token (e.g., USDT)"
-              className="w-full p-2 rounded bg-background text-secondary"
-            />
+            <div className="flex items-center bg-background p-0 rounded-[30px_5px_30px_5px] shadow-lg transition-shadow transform duration-300">
+              <button
+                disabled
+                className="relative w-full cursor-default bg-background text-left shadow-md rounded-[20px_5px_20px_5px] text-secondary border-2 border-primary p-4"
+              >
+                <span className="flex items-center">
+                  <span className="w-6 h-6 mr-2 rounded-full border-2 border-accent flex items-center justify-center">
+                    <FaExchangeAlt className="text-primary" />
+                  </span>
+                  Elegir token
+                </span>
+              </button>
+            </div>
           </div>
+
+          {/* Botón de Comenzar */}
           <button
             onClick={goToSwap}
-            className="bg-primary text-background w-full py-3 rounded-lg hover:bg-accent transition"
+            className="w-full py-3 rounded-[20px_5px_20px_5px] bg-gradient-to-r from-primary to-accent text-background font-bold text-lg shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105"
           >
-            <FaExchangeAlt className="inline-block mr-2" /> Realizar Swap
+            Comenzar
           </button>
         </div>
       </div>

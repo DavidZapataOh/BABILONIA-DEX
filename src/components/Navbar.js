@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { FaWallet } from 'react-icons/fa';
+import CustomConnectButton from './ConnectButton';
 
 const Navbar = () => {
   return (
@@ -16,12 +17,10 @@ const Navbar = () => {
           <Link href="/pools">
             <h1 className="text-textSecondary hover:text-primary">Pools</h1>
           </Link>
-          <Link href="/stats">
-            <h1 className="text-textSecondary hover:text-primary">Estadísticas</h1>
+          <Link href="/teleporter">
+            <h1 className="text-textSecondary hover:text-primary">Teleporter</h1>
           </Link>
-          <button className="bg-primary text-background px-4 py-2 rounded-lg hover:bg-accent transition">
-            <FaWallet className="inline-block mr-2" /> Conectar Wallet
-          </button>
+          <CustomConnectButton/>
         </div>
       </div>
     </nav>
