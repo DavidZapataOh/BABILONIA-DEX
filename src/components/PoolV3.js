@@ -253,7 +253,7 @@ const CreatePoolV3 = () => {
                         </div>
                         <p className="text-xs text-textSecondary mt-1">Balance: {balance1} {token1.symbol}</p>
                     </div>
-                    <div>
+                    <div className='mt-4'>
                         <label className="block text-textSecondary mb-2">Amount Token 2:</label>
                         <div className="relative flex items-center bg-background p-4 rounded-lg shadow-md border-2 border-primary">
                             <img src={token2.image} alt={token2.name} className="w-6 h-6 mr-2 rounded-full" />
